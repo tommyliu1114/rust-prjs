@@ -29,4 +29,14 @@ fn main() {
         indenumber = indenumber - 1;
     }
     println!("LIFTOFF!!!");
+
+    let a = [10,20,30,40,50];
+    //let mut aind = 0;
+    for ele in a.iter() {
+        println!("the value is : {} ",ele);
+        
+    }
+    for inum in (1..4).rev() {
+        println!("rev is {}!",inum);
+    }
 }
