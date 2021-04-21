@@ -32,3 +32,10 @@ fn main() {
 fn route(ip_type: IpAddrKind){
 
 }
+
+enum message {
+    Quit,
+    Move{x:i32,y:i32},
+    Write(String),
+    ChangeColor(i32,i32,i32),
+}
