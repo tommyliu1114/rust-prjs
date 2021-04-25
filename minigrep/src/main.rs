@@ -18,3 +18,16 @@ fn parse_config(args: &[String]) -> (&str,&str){
     let fileName = &args[2];
     (query,fileName)
 }
+
+struct Config {
+    query: String,
+    filename: String,
+}
+
+fn parse_config_struct(args: &[String]) -> Config {
+    let query = args[1].clone();
+    let filename = args[2].clear();
+    Config{
+        
+    }
+}
