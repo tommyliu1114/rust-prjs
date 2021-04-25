@@ -26,8 +26,9 @@ struct Config {
 
 fn parse_config_struct(args: &[String]) -> Config {
     let query = args[1].clone();
-    let filename = args[2].clear();
+    let filename = args[2].clone();
     Config{
-        
+        query,
+        filename,
     }
 }
