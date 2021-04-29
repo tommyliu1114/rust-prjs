@@ -21,5 +21,8 @@ fn main() {
     while let Some(top) = statc.pop(){
         println!(" is noe : {}",top);
     }
-    
+    let vi = vec!['a','b','c'];
+    for (index,value) in vi.iter().enumerate(){
+        println!("{} is at index {}",value,index);
+    }
 }
