@@ -14,4 +14,12 @@ fn main() {
        _ => println!("error got",) 
     }
     println!("Hello, world!");
+    let mut statc = Vec::new();
+    statc.push(1);
+    statc.push(2);
+    statc.push(3);
+    while let Some(top) = statc.pop(){
+        println!(" is noe : {}",top);
+    }
+    
 }
