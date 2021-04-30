@@ -63,4 +63,44 @@ fn main() {
         }
         c_n += 1;        
     }
+    //for 遍历 迭代器
+    for n in 1..101 {
+        if n % 15 == 0{
+            println!("fizzbuzz");
+        }else if n % 3 == 0 {
+            println!("fizz");
+        }else if n % 5 == 0 {
+            println!("buzz");
+        }else {
+            println!("{}",n);
+        }
+    }
+    //iter 每次迭代借用集合一个元素
+    let names = vec!["bob","frank","ferrris"];
+    for name in names.iter() {
+        println!("hello {} . ",name);
+    }
+
+
+
+
+    //into_iter消耗集合
+    for iname in names.into_iter() {
+        println!("consume {}",iname);
+    }
+    /* 会报错的代码，names已经被move了
+    for name in names.iter() {
+        println!("hello {} . ",name);
+    }
+    */
+
+    //iter_mut可变的改变集合中的内容g 
+    let mut names1 = vec!["bob","frank","ferrris"];
+    for kname in names1.iter_mut(){
+        *kname = "cc"
+    }
+    for kiname in names1.iter() {
+        println!("kiname is {}",kiname)
+    }
+
 }
