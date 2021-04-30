@@ -71,6 +71,12 @@ fn main() {
     let inches: Inch = 2 as u64;
 
     println!("{} nanoseconds + {} inches = {} uint?",ns,inches,ns+inches);
+
+    //表达式带有分号，返回的为（）；
+    let z = {
+        2 * x;
+    };
+    println!("z is {:?}",z);
 }
 
 
