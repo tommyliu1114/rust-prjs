@@ -25,7 +25,19 @@ macro_rules! vec_strs {
     };
 }
 
+macro_rules! using_a {
+    ($a:ident, $e:expr) => {
+        {
+            let $a = 42;
+            $e
+        }
+    }
+}
+
+
  fn main() {
      let s = vec_strs![1, "a", true, 3.14159f32];
-     assert_eq!(&*s, &["1d", "a", "true", "3.14159"]);
+     assert_eq!(&*s, &["1", "a", "true", "3.14159"]);
+     let four = using_a!(a, a / 10);
+     println!("macro result is : {}",four);
  }
